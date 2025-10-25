@@ -48,6 +48,95 @@ It includes **notes, examples, and mini-projects** that explore Rust’s core co
 3. Explore the `/notes` folder for concept summaries.
 
 ---
+Perfect 👍 — here’s how to properly set up your **Rust learning projects** so you can use `cargo run` smoothly for each exercise or module.
+
+---
+
+## 🦀 Step-by-Step: Convert Your Folder into a Cargo Project
+
+### 1️⃣ Go to your repo root
+
+From wherever you are, move up to the main repo folder:
+
+```bash
+cd ~/path/to/rust-essential-training
+```
+
+---
+
+### 2️⃣ Create a new Cargo project
+
+Use the `--bin` flag (for an executable project):
+
+```bash
+cargo new _1_write_your_first_program --bin
+```
+
+This creates a new folder structure:
+
+```
+_1_write_your_first_program/
+├── Cargo.toml
+└── src/
+    └── main.rs
+```
+
+> 💡 Tip: Avoid using periods or spaces in folder names (like `1._Write_Your_First_Program`) — Cargo prefers underscores.
+
+---
+
+### 3️⃣ Copy your code
+
+Move your existing `main.rs` content (if you already wrote code) into the new project’s `src/main.rs` file:
+
+```bash
+cp _1._Write_Your_First_Program/main.rs _1_write_your_first_program/src/main.rs
+```
+
+---
+
+### 4️⃣ Run it!
+
+Now, navigate into the new project folder and run your code:
+
+```bash
+cd _1_write_your_first_program
+cargo run
+```
+
+You should see your program’s output in the terminal. 🎉
+
+---
+
+### 5️⃣ (Optional) Update your GitHub repo
+
+To include your new project folder:
+
+```bash
+git add _1_write_your_first_program
+git commit -m "Added first Rust program project"
+git push
+```
+
+---
+
+### 🗂 Recommended Project Layout for Your Repo
+
+As you progress through the LinkedIn Learning course, create one Cargo project per module:
+
+```
+rust-essential-training/
+├── LICENSE
+├── README.md
+├── _1_write_your_first_program/
+├── _2_variables_and_types/
+├── _3_ownership_and_borrowing/
+└── _4_collections_and_traits/
+```
+
+Each folder can be a standalone Cargo project (`cargo new folder_name --bin`), making it easy to build and run examples independently.
+
+---
 
 ## 🧑‍💻 About the Author
 
